@@ -30,12 +30,5 @@ public class Conexion {
         }
         return con;
     }
-
-    
-    public static void main(String[] args){
-        Conexion cone = new Conexion();
-        System.out.println("Conectando");
-        Connection conectar = cone.connect();
-    }
             
 }
