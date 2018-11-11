@@ -17,11 +17,11 @@ public class Conexion {
 
     public Connection connect() {
         Connection con = null;
-        String URL = "jdbc:sqlserver://localhost:1433;databaseName = CinemaMorgan";
+        String URL = "jdbc:sqlserver://localhost:1433;databaseName = Petrichor";
 
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            con = DriverManager.getConnection(URL, "Skrillmau", "1234");
+            con = DriverManager.getConnection(URL, "socks", "123456");
             System.out.println("Conexion con la base de datos establecida");
 
         } catch (ClassNotFoundException | SQLException e) {
@@ -29,6 +29,13 @@ public class Conexion {
             System.err.println(e.getMessage());
         }
         return con;
+    }
+    
+    public static void main (String[] args){
+        
+        Conexion con = new Conexion();
+        Connection cone = con.connect();
+        
     }
 
 }
