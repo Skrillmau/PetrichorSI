@@ -29,6 +29,16 @@
                     <form action="Producto" method="post">
                         <br><input type="submit" class="btn btn-success" value="Productos" />
                     </form>
+                     <form action="Catalogo" method="post">
+                        <br><input type="submit" class="btn btn-success" value="Ver Catalogo" />
+                        <td><input type="text" name="idistri" value="${distribuidor.iddistribuidor}"  hidden/></td>
+                    </form>
+                    <form action="HistorialS" method="post">
+                        <br><input type="submit" class="btn btn-success" value="Ver Historial" />
+                        <td><input type="text" name="idistri" value="${distribuidor.iddistribuidor}"  hidden/></td>
+
+                    </form>
+
                 </div>
             </div>
         </div>

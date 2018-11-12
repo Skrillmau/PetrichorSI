@@ -4,9 +4,58 @@
         <servlet-name>Login</servlet-name>
         <servlet-class>Servlets.Login</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Catalogo</servlet-name>
+        <servlet-class>Servlets.Catalogo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Eliminar</servlet-name>
+        <servlet-class>Servlets.Eliminar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Pedidos</servlet-name>
+        <servlet-class>Servlets.Pedidos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HistorialS</servlet-name>
+        <servlet-class>Servlets.HistorialS</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Carrito</servlet-name>
+        <servlet-class>Servlets.Carrito</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Compra</servlet-name>
+        <servlet-class>Servlets.Compra</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Catalogo</servlet-name>
+        <url-pattern>/Catalogo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Eliminar</servlet-name>
+        <url-pattern>/Eliminar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Pedidos</servlet-name>
+        <url-pattern>/Pedidos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HistorialS</servlet-name>
+        <url-pattern>/HistorialS</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Carrito</servlet-name>
+        <url-pattern>/Carrito</url-pattern>
+        <url-pattern>/eliminarproducto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Compra</servlet-name>
+        <url-pattern>/Compra</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

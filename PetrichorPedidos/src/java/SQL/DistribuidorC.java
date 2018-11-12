@@ -37,7 +37,7 @@ public class DistribuidorC {
             System.out.println("Iniciando sesion distribuidor");
 
             if (rs.next()) {
-                dis.setID_Distribuidor(rs.getInt("ID_Distribuidor"));
+                dis.setIddistribuidor(rs.getInt("ID_Distribuidor"));
                 dis.setUsuario(rs.getString("Usuario"));
                 dis.setPassword(rs.getString("Pass"));
                 dis.setTipo(rs.getString("Tipo"));
@@ -45,7 +45,7 @@ public class DistribuidorC {
                 dis.setDireccion(rs.getString("Direccion"));
                 dis.setCiudad(rs.getString("Ciudad"));
                 dis.setPais(rs.getString("Pais"));
-                dis.setID_Usuario(rs.getInt("ID_Usuario"));
+                dis.setIdusuario(rs.getInt("ID_Usuario"));
                 return dis;
             }
 

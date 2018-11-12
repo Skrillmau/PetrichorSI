@@ -11,8 +11,8 @@ package Modelo;
  */
 public class Distribuidor {
 
-    private int ID_Distribuidor;
-    private int ID_Usuario;
+    private int Iddistribuidor;
+    private int Idusuario;
     private String Usuario;
     private String Password;
     private String Tipo;
@@ -25,20 +25,20 @@ public class Distribuidor {
 
     }
 
-    public int getID_Distribuidor() {
-        return ID_Distribuidor;
+    public int getIddistribuidor() {
+        return Iddistribuidor;
     }
 
-    public void setID_Distribuidor(int ID_Distribuidor) {
-        this.ID_Distribuidor = ID_Distribuidor;
+    public void setIddistribuidor(int Iddistribuidor) {
+        this.Iddistribuidor = Iddistribuidor;
     }
 
-    public int getID_Usuario() {
-        return ID_Usuario;
+    public int getIdusuario() {
+        return Idusuario;
     }
 
-    public void setID_Usuario(int ID_Usuario) {
-        this.ID_Usuario = ID_Usuario;
+    public void setIdusuario(int Idusuario) {
+        this.Idusuario = Idusuario;
     }
 
     public String getUsuario() {

@@ -24,8 +24,11 @@
                         <h2><b>Correo: </b> ${empleado.correo} </h2>
                         <h2><b>Cargo: </b> ${empleado.cargo} </h2>
                     </form>
-                    <form action="Producto" method="post">
-                        <br><input type="submit" class="btn btn-success" value="Productos" />
+                    <form action="Catalogo" method="post">
+                        <br><input type="submit" class="btn btn-success" value="Ver Catalogo" />
+                    </form>
+                    <form action="Pedidos" method="post">
+                        <br><input type="submit" class="btn btn-success" value="Ver Pedidos" />
                     </form>
                 </div>
             </div>
