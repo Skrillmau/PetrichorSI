@@ -40,7 +40,7 @@ public class Eliminar extends HttpServlet {
         ProductoC productoc = new ProductoC(cn);
         productoc.delete(Integer.parseInt(id));
         RequestDispatcher rd;
-        rd = request.getRequestDispatcher("/catalogoP");
+        rd = request.getRequestDispatcher("/catalogoP.jsp");
         rd.forward(request, response);
 
     }

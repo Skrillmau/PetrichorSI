@@ -19,7 +19,7 @@
                 <img src="Productos/${producto.path}"/>
             </div>
 
-            <p>${producto.nombre}"</p>  
+            <p><c:out value="${producto.nombre}"/></p>  
             <p><c:out value="${producto.descripcion}"/></p>  
             <p><c:out value="${producto.precio}"/></p>  
             <p><c:out value="${producto.idproducto}"/></p>  
