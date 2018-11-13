@@ -14,9 +14,12 @@
     </head>
     <body>
         <c:forEach items="${listaproductos}" var="producto" varStatus="status">
+            <div class="producto_img">
+                                
+                <img src="Productos/${producto.path}"/>
+            </div>
 
-
-            <p><c:out value="${producto.nombre}"/></p>  
+            <p>${producto.nombre}"</p>  
             <p><c:out value="${producto.descripcion}"/></p>  
             <p><c:out value="${producto.precio}"/></p>  
             <p><c:out value="${producto.idproducto}"/></p>  

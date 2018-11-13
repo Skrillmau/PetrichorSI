@@ -47,9 +47,24 @@ public class ProductoC {
         }
 
         return lista;
+    }    public boolean insert(Producto producto) {
+        boolean creado = false;
+        try {
+            String consulta = "insert into productos (ID_Producto,Nombre,Descripcion,Precio,Path) values (?,?,?,?,?)";
+            PreparedStatement pst = con.prepareStatement(consulta);
+            pst.setString(1, producto.getIdproducto() + "");
+            pst.setString(2, producto.getNombre());
+            pst.setString(3, producto.getDescripcion());
+            pst.setString(4, producto.getPrecio()+"");
+            pst.setString(5, producto.getPath());
+            pst.executeUpdate();
+            creado = true;
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+        return creado;
     }
-
-    public boolean Delete(int id) {
+     public boolean delete(int id) {
         boolean creado = false;
         try {
             String consulta = "delete from productos where ID_Producto=?;";

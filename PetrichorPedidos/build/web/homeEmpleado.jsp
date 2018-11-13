@@ -30,6 +30,9 @@
                     <form action="Pedidos" method="post">
                         <br><input type="submit" class="btn btn-success" value="Ver Pedidos" />
                     </form>
+                    <form action="CrearProducto" method="post">
+                        <br><input type="submit" class="btn btn-success" value="Ver Pedidos" />
+                    </form>
                 </div>
             </div>
         </div>

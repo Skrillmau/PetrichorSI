@@ -38,9 +38,9 @@ public class Eliminar extends HttpServlet {
         Conexion con = new Conexion();
         Connection cn = con.connect();
         ProductoC productoc = new ProductoC(cn);
-        productoc.Delete(Integer.parseInt(id));
+        productoc.delete(Integer.parseInt(id));
         RequestDispatcher rd;
-        rd = request.getRequestDispatcher("/CatalogoP");
+        rd = request.getRequestDispatcher("/catalogoP");
         rd.forward(request, response);
 
     }
