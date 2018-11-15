@@ -1,0 +1,97 @@
+body{
+    width: 100%;
+    height: 100%;
+    background-image: url("imagenes/cultivos.jpg");
+    background-size: cover;
+    
+}
+
+.Banner{
+    width:115px;
+    height:50px;
+}
+
+.container{
+    background: transparent;
+    align-content: center;
+    border-radius: 10px;
+}
+
+h1{
+    color: whitesmoke;
+    text-align: center;
+}
+
+h3{
+    color: whitesmoke;
+    text-align: center;
+}
+
+#formUsuario{
+    margin: auto;
+    align-content: center;
+    width:400px;
+    background:#1d8eff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#botones-Menu{
+    margin: auto;
+    align-content: center;
+    text-align: center;
+}
+
+.btn-Menu{
+    background: blue;
+    color: whitesmoke;
+    border-radius: 10px;
+}
+.btn-Menu2{
+    margin: auto;
+    align-content: center;
+    width:400px;
+    background:#1d8eff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+#menu li {
+    display: inline-block;
+    line-height: 50px;
+    list-style: none;
+    margin: 0 30px;
+}
+
+#menuLinea{
+    background: url("imagenes/lineas.jpg");
+    background-size: cover;
+    align-content: center;
+    align-self: center;
+}
+
+#redes{
+    margin: auto;
+    align-content: center;
+    text-align: center;
+}
+
+.TJG{
+    text-align: center;
+    color: whitesmoke;
+    font: 48px 'Roboto', sans-serif;
+}
+
+.line{
+    text-align: center;
+    color:#1d8eff;
+    font: 48px 'Roboto', sans-serif;
+}
+
+.def{
+    text-align: center;
+    color: whitesmoke;
+    font: 12px 'Roboto', sans-serif;
+}
+

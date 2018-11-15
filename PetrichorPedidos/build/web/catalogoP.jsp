@@ -16,7 +16,7 @@
         <c:forEach items="${listaproductos}" var="producto" varStatus="status">
             <div class="producto_img">
                                 
-                <img src="Productos/${producto.path}"/>
+                <img src=<c:out value="Productos/${producto.path}"/>/>
             </div>
 
             <p><c:out value="${producto.nombre}"/></p>  

@@ -25,6 +25,7 @@ public class ProductoC {
 
     public ArrayList<Producto> getListaP() {
         ArrayList<Producto> lista = new ArrayList<>();
+        System.out.println(" Cargando Lista productos");
         try {
             String consulta = "SELECT * FROM productos";
 
