@@ -42,7 +42,7 @@ public class Catalogo extends HttpServlet {
             Connection cn = con.connect();
             ProductoC productoc = new ProductoC(cn);
             ArrayList<Producto> listap = productoc.getListaP();
-            System.out.println(listap.get(0).getDescripcion());
+            System.out.println(listap.get(0).getPath());
             RequestDispatcher rd;
             request.setAttribute("listaproductos", listap);
             rd = request.getRequestDispatcher("/catalogoP.jsp");
