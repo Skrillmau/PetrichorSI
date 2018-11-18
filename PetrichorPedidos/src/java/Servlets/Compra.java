@@ -81,7 +81,7 @@ public class Compra extends HttpServlet {
                     out.println("<body>");
                     out.println("<div id='formUsuario'>");
                     out.println("<h2>Compra registrada exitosamente</h2>");
-                    out.println("<a href='homecliente.jsp'><input type='submit' class='btn btn-success' value='Volver'></a>");
+                    out.println("<a href='homeDistribuidor.jsp'><input type='submit' class='btn btn-success' value='Volver'></a>");
                     out.println("</div>");
                     out.println("</body>");
                     out.println("</html>");
@@ -100,7 +100,7 @@ public class Compra extends HttpServlet {
                     out.println("<body>");
                     out.println("<div id='formUsuario'>");
                     out.println("<h2>Error</h2>");
-                    out.println("<a href='index.jsp'><input type='submit' class='btn btn-success' value='Volver'></a>");
+                    out.println("<a href='homeDistribuidor.jsp'><input type='submit' class='btn btn-success' value='Volver'></a>");
                     out.println("</div>");
                     out.println("</body>");
                     out.println("</html>");

@@ -1,8 +1,9 @@
 <%-- 
-    Document   : pedidos
-    Created on : Nov 12, 2018, 1:08:32 AM
+    Document   : catalogoP
+    Created on : Nov 11, 2018, 11:53:45 PM
     Author     : JUan Camilo Posada
 --%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -17,11 +18,11 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
 
-    <body>
-
+    <body>    
         <nav class="navbar navbar-default fixed-top">
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <div class="navbar-header">
+
                     <a href="index.jsp">
                         <img src="Css/imagenes/Captura.PNG" class="Banner">
                     </a>
@@ -33,17 +34,18 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Acciones<span class="caret"></span></a>
                         <ul class="dropdown-menu">
+                            <li role="separator" class="divider"></li>
                             <li class="nav-item">
-                                <form action="Catalogo" method="post">
-                                    <br><input type="submit" class="btn btn-success" value="Ver Catalogo" />
+                                <form action="Pedidos" method="post">
+                                    <br><input type="submit" class="btn btn-success" value="Ver Pedidos" />
                                 </form>
                             </li>
                             <li role="separator" class="divider"></li>
                             <li class="nav-item">
                                 <a href="CrearProducto.jsp">Crear Producto</a>
-                            </li>  
+                            </li>                                        
                         </ul>
-                    </li>
+                    </li>  
                 </ul>
                 </li> 
                 </ul>
@@ -52,28 +54,30 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center" style="color: whitesmoke;">
-                    <h1 class="mt-5">Ver Pedidos</h1>
+                    <h1 class="mt-5">Catalogo</h1>
+                </div>
+                <div class="col-lg-12 text-center" style="color: whitesmoke;">
+                    <c:forEach items="${listaproductos}" var="producto" varStatus="status">
+                        <div id="formUsuario">
+                            <div class="producto_img">   
+                                <img src="Productos/${producto.path}" width="500" height="500"/>
+                            </div>
+                            <p><c:out value="${producto.nombre}"/></p>  
+                            <p><c:out value="${producto.descripcion}"/></p>  
+                            <p><c:out value="${producto.precio}"/></p>  
+                            <p><c:out value="${producto.idproducto}"/></p>  
+
+                            <form action=<c:out value= "Carrito?precio=${producto.precio}&nombre=${producto.nombre}&id=${producto.idproducto}"/> method="post">
+                                <input type="hidden" class="btn btn-success" value="Comprar" />
+                            </form>
+
+                            <form action=<c:out value="Eliminar?id=${producto.idproducto}"/> method="post">
+                                <input type="submit" class="btn btn-danger" value="Eliminar" />
+                            </form>
+                        </div>
+                    </c:forEach>
                 </div>
             </div>
-            <div class="container">
-                <c:forEach items="${listapedidos}" var="pedido" varStatus="status">
-                    <div id="formUsuario">
-                        <p><c:out value="${pedido.idpedido}"/></p>  
-                        <p><c:out value="${pedido.nombree}"/></p>  
-                        <p><c:out value="${pedido.idproducto}"/></p>  
-                        <p><c:out value="${pedido.iddistribuidor}"/></p>  
-                        <p><c:out value="${pedido.cantidad}"/></p>  
-                        <p><c:out value="${pedido.costo}"/></p>  
-                        <p><c:out value="${pedido.estado}"/></p>  
-                        <p><c:out value="${pedido.fecha}"/></p>  
-
-                        <form action=<c:out value="Validar?id=${pedido.idpedido},${empleado.cargo}"/> method="post">
-                            <input type="submit" class="btn btn-danger" value="Validar Pedido" />
-                        </form>
-                    </div>
-                </c:forEach>
-            </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>

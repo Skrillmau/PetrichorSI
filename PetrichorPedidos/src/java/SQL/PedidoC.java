@@ -38,7 +38,6 @@ public class PedidoC {
                 prod.setIdpedido(rs.getInt("ID_Pedido"));
                 prod.setIdproducto(rs.getInt("ID_Producto"));
                 prod.setIddistribuidor(rs.getInt("ID_Distribuidor"));
-                prod.setNombree(rs.getString("NombreEmpleado"));
                 prod.setCantidad(rs.getInt("Cantidad"));
                 prod.setCosto(rs.getDouble("Costo"));
                 prod.setEstado(rs.getString("Estado"));
@@ -52,4 +51,19 @@ public class PedidoC {
 
         return lista;
     }
+    
+         public boolean update (int id,String pedido){
+         boolean creado = false;
+        try {
+            String consulta = "UPDATE Pedidos SET Estado = ? WHERE ID_Pedido=?;";
+            PreparedStatement pst = con.prepareStatement(consulta);
+            pst.setString(1, pedido);
+            pst.setString(2, id+"");
+            pst.executeUpdate();
+            creado = true;
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+        return creado;
+     }
 }
